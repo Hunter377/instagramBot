@@ -88,26 +88,27 @@ nav {
       width: 600px;
       color: #FFF;
       font-size: 22px; }
-    .page-header .left-section .left-text button {
-      margin-top: 15px;
-      border: 3px solid #FFF;
-      font-size: 18px;
-      background-color: transparent;
-      color: #FFF;
-      text-transform: uppercase;
-      padding: 12px 35px;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-weight: bold; }
-      .page-header .left-section .left-text button:hover {
-        background-color: #FFF;
-        color: #dc2743; }
   .page-header #artius-logo {
     position: absolute;
     top: 75%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -75%); }
+
+button {
+  margin-top: 15px;
+  border: 3px solid #FFF;
+  font-size: 18px;
+  background-color: transparent;
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 12px 35px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold; }
+  button:hover {
+    background-color: #FFF;
+    color: #dc2743; }
 
 .about-page {
   background-image: url("../images/cell-image.jpg");
@@ -301,6 +302,57 @@ nav {
   font-size: 22px;
   text-align: center;
   margin: 0 auto; }
+
+.three-column {
+  display: flex;
+  padding: 0 40px;
+  justify-content: center;
+  margin-bottom: 30px; }
+  .three-column > div {
+    max-width: 500px;
+    margin-right: 40px;
+    text-align: center;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+    padding: 30px; }
+    .three-column > div:before {
+      content: '';
+      position: absolute;
+      opacity: 0.3;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.3);
+      filter: blur(10px); }
+    .three-column > div:last-of-type {
+      margin-right: 0; }
+  .three-column.dark > div {
+    background-color: #333; }
+    .three-column.dark > div:before {
+      display: none; }
+  .three-column i {
+    font-size: 90px;
+    color: white;
+    margin: 10px 0 15px 0; }
+  .three-column h3 {
+    text-transform: uppercase;
+    font-size: 30px; }
+  .three-column h3, .three-column p {
+    color: white; }
+
+.block {
+  display: block; }
+
+.get-started-page {
+  text-align: center; }
+  .get-started-page a {
+    display: inline-block;
+    text-align: center;
+    margin-top: 70px; }
 
 .footer {
   position: fixed;

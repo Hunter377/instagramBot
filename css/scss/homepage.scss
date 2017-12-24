@@ -110,22 +110,6 @@ nav {
                 color: #FFF;
                 font-size: 22px;
             }
-            button {
-                margin-top: 15px;
-                border: 3px solid #FFF;
-                font-size: 18px;
-                background-color: transparent;
-                color: #FFF;
-                text-transform: uppercase;
-                padding: 12px 35px;
-                cursor: pointer;
-                transition: all 0.2s;
-                font-weight: bold;
-                &:hover {
-                    background-color: #FFF;
-                    color: #dc2743;
-                }
-            }
         }
     }
 
@@ -135,6 +119,23 @@ nav {
         left: 50%;
         text-align: center;
         transform: translate(-50%, -75%);
+    }
+}
+
+button {
+    margin-top: 15px;
+    border: 3px solid #FFF;
+    font-size: 18px;
+    background-color: transparent;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 12px 35px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: bold;
+    &:hover {
+        background-color: #FFF;
+        color: #dc2743;
     }
 }
 
@@ -410,6 +411,71 @@ nav {
     font-size: 22px;
     text-align: center;
     margin: 0 auto;
+}
+
+.three-column {
+    display: flex;
+    padding: 0 40px;
+    justify-content: center;
+    margin-bottom: 30px;
+    > div {
+        max-width: 500px;
+        margin-right: 40px;
+        text-align: center;
+        min-height: 300px;
+        position: relative;
+        overflow: hidden;
+        padding: 30px;
+        &:before {
+            content: '';
+            position: absolute;
+            opacity: 0.3;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            box-shadow: inset 0 0 0 200px rgba(255,255,255,0.3);
+            filter: blur(10px);
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    &.dark {
+        > div {
+            background-color: #333;
+            &:before {
+                display: none;
+            }
+        }
+    }
+    i {
+        font-size: 90px;
+        color: white;
+        margin: 10px 0 15px 0;
+    }
+    h3 {
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+    h3, p {
+        color: white;
+    }
+}
+
+.block {
+    display: block;
+}
+
+.get-started-page {
+    text-align: center;
+    a {
+        display: inline-block;
+        text-align: center;
+        margin-top: 70px;
+    }
 }
 
 .footer {
